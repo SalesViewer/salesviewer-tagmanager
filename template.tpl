@@ -1,11 +1,3 @@
-___TERMS_OF_SERVICE___
-
-By creating or modifying this file you agree to Google Tag Manager's Community
-Template Gallery Developer Terms of Service available at
-https://developers.google.com/tag-manager/gallery-tos (or such other URL as
-Google may provide), as modified from time to time.
-
-
 ___INFO___
 
 {
@@ -60,11 +52,12 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 
 const queryPermission = require('queryPermission');
 const injectScript = require('injectScript');
+const encodeUriComponent = require('encodeUriComponent');
 
 const account = data.AccountID;
-const url = 'https://www.salesviewer.org/'+account+'.js';
+const url = 'https://www.salesviewer.org/'+encodeUriComponent(account)+'.js';
 if (queryPermission('inject_script', url)) {
-  injectScript('https://www.salesviewer.org/'+account+'.js', data.gtmOnSuccess, data.gtmOnFailure);
+  injectScript('https://www.salesviewer.org/'+encodeUriComponent(account)+'.js', data.gtmOnSuccess, data.gtmOnFailure);
 }
 
 
@@ -108,5 +101,6 @@ setup: ''
 
 ___NOTES___
 
+Created on 29.9.2021, 10:01:51
 
 
