@@ -1,5 +1,5 @@
 homepage: "https://www.salesviewer.com/"
 documentation: "https://www.salesviewer.com/"
 versions:
-  - sha: d7129eefdbf4713bf9dee350481c75482b8daab9
+  - sha: e0019a706a99422e4931169345743a6208c14d4a
     changeNotes: Update template.tpl
